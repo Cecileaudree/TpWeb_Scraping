@@ -1,0 +1,23 @@
+{
+  "target": {
+    "base_url": "https://example.com",
+    "start_page": "samples/sample_page.html",
+    "item_selector": ".product-card",
+    "fields": {
+      "title": ".product-title",
+      "price": ".product-price",
+      "link": ".product-link",
+      "availability": ".product-availability",
+      "published_date": "time"
+    }
+  },
+  "export": {
+    "output_path": "samples/sample_output.json",
+    "format": "json"
+  },
+  "scrape": {
+    "delay_seconds": 1.0,
+    "max_items": 20,
+    "sample_mode": true
+  }
+}
