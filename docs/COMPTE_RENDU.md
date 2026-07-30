@@ -1,5 +1,8 @@
 # Compte-rendu TP S14
 
+**Dépôt GitHub public** : https://github.com/Cecileaudree/TpWeb_Scraping
+**Hash du commit évalué** : `2e730d2dd646b46a38f0966024bd5427dfb2ad87`
+
 ## 1. Cible et périmètre
 
 - Cible: Auckland War Memorial Museum (S14)
