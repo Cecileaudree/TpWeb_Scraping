@@ -4,7 +4,7 @@ Ce projet propose un collecteur Web minimal en Python, structuré pour répondre
 
 ## Objectif
 
-Ce scraper est conçu comme un exemple reproductible. Il collecte des fiches produits depuis une page HTML enregistrée dans `samples/sample_page.html`, puis exporte un fichier JSON normalisé.
+Ce scraper est aligné sur la cible S14 (Auckland War Memorial Museum). Il collecte une liste d'objets de collection, avec un mode local reproductible via `samples/sample_page.html`.
 
 ## Structure du projet
 
@@ -34,13 +34,20 @@ python -m pip install -r requirements.txt
 
 ## Utilisation
 
-Exécution limitée avec la page d'exemple :
+Exécution avec la configuration fournie :
 
 ```bash
 python -m src.main --config config.example.json
 ```
 
 L'export écrit par défaut dans `samples/sample_output.json`.
+
+## Contraintes S14 prises en compte
+
+- Volume plafonné à 20 objets
+- Scraping de liste uniquement (pas de parcours de pages détail)
+- Champs minimaux de sortie : `title`, `category`, `date_text`, `url`
+- Garde-fou Crawl-delay : pour `aucklandmuseum.com`, le délai configuré doit être au moins 30 secondes
 
 ## Vérification sans réseau
 
@@ -54,20 +61,31 @@ pytest
 
 Le scraper produit un JSON contenant des objets avec :
 
-- `id` : identifiant stable (URL source)
-- `source_url` : URL de la page produit
+- `id` : identifiant stable (URL normalisée)
 - `title`
-- `price`
-- `currency`
-- `availability`
-- `collected_at`
-- `published_date`
+- `category`
+- `date_text`
+- `url`
+- `collected_at` : date et heure de collecte, au format ISO 8601 avec fuseau (UTC)
+
+## Valeurs absentes vs valeurs vides
+
+- Un champ optionnel (`category`, `date_text`) **absent** du HTML source est remplacé par la valeur `"inconnu"` et compté dans les statistiques comme champ manquant.
+- Un champ **présent mais vide** reste une chaîne vide `""` : ce n'est pas la même situation qu'une absence, et le programme ne les confond pas.
+- Un champ obligatoire (`title`, `url`) absent ou vide entraîne le **rejet** de l'objet.
+
+## Pagination
+
+La cible S14 utilisée en exemple tient sur une seule page (volume ≤ 20). Le
+scraper sait néanmoins suivre une pagination si `target.next_page_selector`
+est renseigné dans la configuration (ex: `a[rel='next']`), dans la limite de
+`scrape.max_pages`.
 
 ## Limites connues
 
-- Exemple basé sur un HTML statique local
-- Le parsing repose sur des selectors CSS simples
-- Les champs absents sont rejetés pour éviter des enregistrements silencieusement incomplets
+- Les sélecteurs CSS peuvent évoluer sur la cible réelle
+- Le mode d'exemple local reste la base des tests automatisés
+- Les entrées sans titre ou URL sont rejetées
 
 ## Usage responsable
 
