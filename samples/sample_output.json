@@ -1,32 +1,26 @@
 [
   {
-    "id": "samples/product-a.html",
-    "source_url": "samples/product-a.html",
-    "title": "Produit A",
-    "price": 19.9,
-    "currency": "€",
-    "availability": "En stock",
-    "collected_at": "2026-07-30T11:13:30.872076+00:00",
-    "published_date": "2026-07-12T00:00:00"
+    "id": "/discover/collections/item-a",
+    "title": "Tiki carved pendant",
+    "category": "Ethnology",
+    "date_text": "circa 1880",
+    "url": "/discover/collections/item-a",
+    "collected_at": "2026-07-30T13:59:21.127476+00:00"
   },
   {
-    "id": "samples/product-b.html",
-    "source_url": "samples/product-b.html",
-    "title": "Produit B",
-    "price": 24.5,
-    "currency": "€",
-    "availability": "Rupture",
-    "collected_at": "2026-07-30T11:13:30.873147+00:00",
-    "published_date": "2026-07-10T00:00:00"
+    "id": "/discover/collections/item-b",
+    "title": "Maori adze",
+    "category": "Archaeology",
+    "date_text": "1901",
+    "url": "/discover/collections/item-b",
+    "collected_at": "2026-07-30T13:59:21.127476+00:00"
   },
   {
-    "id": "samples/product-c.html",
-    "source_url": "samples/product-c.html",
-    "title": "Produit C",
-    "price": 9.99,
-    "currency": "€",
-    "availability": "En cours",
-    "collected_at": "2026-07-30T11:13:30.873147+00:00",
-    "published_date": "2026-07-08T00:00:00"
+    "id": "/discover/collections/item-c",
+    "title": "Photographic plate",
+    "category": "Photography",
+    "date_text": "1937",
+    "url": "/discover/collections/item-c",
+    "collected_at": "2026-07-30T13:59:21.127476+00:00"
   }
 ]
