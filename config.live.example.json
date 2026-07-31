@@ -1,19 +1,19 @@
 {
   "target": {
     "base_url": "https://www.aucklandmuseum.com",
-    "start_page": "https://www.aucklandmuseum.com/collections-research/collections",
-    "item_selector": "main a[href]",
-    "next_page_selector": null,
+    "start_page": "https://www.aucklandmuseum.com/discover/collections/search?k=brooch",
+    "item_selector": "article a[href^='/discover/collections/record/']",
+    "next_page_selector": "a[href*='p=']",
     "fields": {
-      "title": "self",
+      "title": "h2.search-results--heading",
       "url": "self",
-      "category": "self",
-      "date_text": "self"
+      "category": "p.search-results--info-details span:nth-of-type(1)",
+      "date_text": "p.search-results--info-details span:nth-of-type(3)"
     }
   },
   "export": {
-    "output_path": "output.json",
-    "format": "json"
+    "output_path": "output.jsonl",
+    "format": "jsonl"
   },
   "scrape": {
     "delay_seconds": 30.0,
