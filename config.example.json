@@ -1,7 +1,7 @@
 {
   "target": {
-    "base_url": "https://en.wikipedia.org",
-    "start_page": "https://en.wikipedia.org/wiki/Auckland_War_Memorial_Museum",
+    "base_url": "https://www.aucklandmuseum.com",
+    "start_page": "https://www.aucklandmuseum.com/collections-research/collections",
     "item_selector": "#bodyContent a[href^='/wiki/']",
     "next_page_selector": null,
     "fields": {

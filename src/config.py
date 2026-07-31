@@ -4,6 +4,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Any, Optional
+from urllib.parse import urljoin
 
 
 @dataclass
@@ -62,4 +63,22 @@ class Config:
         return cls(target=target, export=export, scrape=scrape)
 
     def resolve_source(self) -> str:
-        return self.target.start_page
+        sample_page = Path("samples/sample_page.html")
+        if self.scrape.sample_mode and sample_page.exists():
+            return sample_page.as_posix()
+
+        start_page = self.target.start_page
+
+        if start_page.startswith(("http://", "https://", "file://")):
+            return start_page
+
+        if Path(start_page).exists():
+            return start_page
+
+        if self.scrape.sample_mode:
+            return start_page
+
+        if self.target.base_url:
+            return urljoin(self.target.base_url.rstrip("/") + "/", start_page)
+
+        return start_page

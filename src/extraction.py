@@ -60,6 +60,30 @@ def extract_items(html_or_data: Any, start_page: str, item_selector: str, fields
 
     # 2. Fallback HTML Parser
     soup = BeautifulSoup(str(html_or_data), "html.parser")
+    for link in soup.select(item_selector):
+        if not getattr(link, "name", None):
+            continue
+
+        # Support des champs extraits sur l'element courant (selector = "self").
+        # Utile pour les cartes de résultats du moteur de recherche Auckland Museum.
+        raw: Dict[str, Optional[str]] = {}
+        for field_name, selector in fields.items():
+            selected = link if selector == "self" else link.select_one(selector)
+            if selected is None:
+                raw[field_name] = None
+                continue
+
+            if field_name in {"link", "url"} or field_name.endswith("_url"):
+                raw[field_name] = selected.get("href") if hasattr(selected, "get") else None
+            else:
+                raw[field_name] = selected.get_text(strip=True)
+
+        raw["source_page"] = start_page
+        results.append(RawItem(raw=raw))
+
+    if results:
+        return results
+
     for link in soup.find_all("a", href=True):
         href = link.get("href", "")
         text = link.get_text(strip=True)
