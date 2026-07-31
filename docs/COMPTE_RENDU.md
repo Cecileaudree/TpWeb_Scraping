@@ -1,7 +1,7 @@
 # Compte-rendu TP S14
 
 **Dépôt GitHub public** : https://github.com/Cecileaudree/TpWeb_Scraping
-**Hash du commit évalué** : `2e730d2dd646b46a38f0966024bd5427dfb2ad87`
+**Hash du commit évalué** : *(à recopier avec `git rev-parse HEAD` juste avant l'envoi — ce qui est poussé après ce hash n'est pas noté)*
 
 ## 1. Cible et périmètre
 
