@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 from .acquisition import load_page
 from .config import Config
 from .extraction import RawItem, extract_items, extract_next_page
-from .exporter import export_json
+from .exporter import export_items
 from .normalization import normalize_items, NormalizedItem
 
 
@@ -71,7 +71,7 @@ def run(config_path: str) -> int:
     normalized, stats = normalize_items(raw_dicts)
     if config.scrape.max_items > 0:
         normalized = normalized[: config.scrape.max_items]
-    export_json(normalized, config.export.output_path)
+    export_items(normalized, config.export.output_path, config.export.format)
 
     duration_ms = (time.perf_counter() - started_at) * 1000
     logging.info("Pages parcourues: %d", pages_seen)
