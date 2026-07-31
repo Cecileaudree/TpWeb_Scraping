@@ -1,11 +1,20 @@
 # Compte-rendu TP S14
 
-**Dépôt GitHub public** : https://github.com/Cecileaudree/TpWeb_Scraping
-**Hash du commit évalué** : *(à recopier avec `git rev-parse HEAD` juste avant l'envoi — ce qui est poussé après ce hash n'est pas noté)*
+## Informations de remise
+
+- **Nom et prénom** : [à compléter]
+- **Groupe** : [à compléter]
+- **Identifiant de cible** : S14
+- **Dépôt GitHub public** : https://github.com/Cecileaudree/TpWeb_Scraping
+- **Hash du commit évalué** : `3778118fea2e857e865ce9408dab195d9b410d01`
+
+## Résumé
+
+L'objet collecte est un CollectionItem (title, category, date_text, url, collected_at) issu de la cible S14 Auckland Museum. Le pipeline (config -> acquisition -> extraction -> normalisation -> export) produit un JSON valide de 3 objets sur l'echantillon local, avec garde-fou de delai (30s) et plafond de volume (20) codes en dur. La difficulte principale a ete que la cible reelle expose sa recherche via un postback ASP.NET protege par un pare-feu anti-bot (403), rendant le scraping live non praticable sans contourner une protection - ce que je n'ai pas fait. La solution retenue est un mode echantillon local deterministe, avec la meme logique de code que celle prevue pour la cible reelle.
 
 ## 1. Cible et périmètre
 
-- Cible: Auckland War Memorial Museum (S14)
+- Cible: Auckland War Memorial Museum
 - URL de base: https://www.aucklandmuseum.com
 - URL de départ utilisée dans ce dépôt: `samples/sample_page.html` (mode local reproductible)
 - Objet collecté: CollectionItem
@@ -105,3 +114,12 @@
 	- conformité avec les contraintes S14;
 	- cohérence des sélecteurs avec l'échantillon HTML;
 	- exécution des tests et validation des résultats.
+
+## 10. Validation finale
+
+- Commande de validation exécutée : `python -m pytest`
+- Résultat observé : 6 tests passés sur 6
+- Commande d'exécution du pipeline : `python -m src.main --config config.example.json`
+- Résultat observé : 3 objets exportés dans `samples/sample_output.json`
+
+
