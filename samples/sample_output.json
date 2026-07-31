@@ -5,7 +5,7 @@
     "category": "Ethnology",
     "date_text": "circa 1880",
     "url": "/discover/collections/item-a",
-    "collected_at": "2026-07-31T09:07:52.351794+00:00"
+    "collected_at": "2026-07-31T11:05:10.172245+00:00"
   },
   {
     "id": "/discover/collections/item-b",
@@ -13,7 +13,7 @@
     "category": "Archaeology",
     "date_text": "1901",
     "url": "/discover/collections/item-b",
-    "collected_at": "2026-07-31T09:07:52.351794+00:00"
+    "collected_at": "2026-07-31T11:05:10.172245+00:00"
   },
   {
     "id": "/discover/collections/item-c",
@@ -21,6 +21,6 @@
     "category": "Photography",
     "date_text": "1937",
     "url": "/discover/collections/item-c",
-    "collected_at": "2026-07-31T09:07:52.351794+00:00"
+    "collected_at": "2026-07-31T11:05:10.172245+00:00"
   }
 ]

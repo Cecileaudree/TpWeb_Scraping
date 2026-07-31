@@ -1,22 +1,24 @@
 {
   "target": {
-    "base_url": "https://www.aucklandmuseum.com",
-    "start_page": "samples/sample_page.html",
-    "item_selector": ".collection-item",
+    "base_url": "https://en.wikipedia.org",
+    "start_page": "https://en.wikipedia.org/wiki/Auckland_War_Memorial_Museum",
+    "item_selector": "#bodyContent a[href^='/wiki/']",
+    "next_page_selector": null,
     "fields": {
-      "title": ".item-title",
-      "url": ".item-link",
-      "category": ".item-category",
-      "date_text": ".item-date"
+      "title": "self",
+      "url": "self",
+      "category": "span",
+      "date_text": "time"
     }
   },
   "export": {
-    "output_path": "samples/sample_output.json",
+    "output_path": "output.json",
     "format": "json"
   },
   "scrape": {
-    "delay_seconds": 30.0,
-    "max_items": 20,
-    "sample_mode": true
+    "delay_seconds": 1.0,
+    "max_pages": 1,
+    "max_items": 10,
+    "sample_mode": false
   }
 }
