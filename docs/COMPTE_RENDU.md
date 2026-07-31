@@ -2,11 +2,11 @@
 
 ## Informations de remise
 
-- **Nom et prénom** : [à compléter]
-- **Groupe** : [à compléter]
+- **Nom et prénom** : Dina Chaouki, Cécile Audrey
+- **Groupe** : 9
 - **Identifiant de cible** : S14
 - **Dépôt GitHub public** : https://github.com/Cecileaudree/TpWeb_Scraping
-- **Hash du commit évalué** : `3778118fea2e857e865ce9408dab195d9b410d01`
+- **Hash du commit évalué** : `a132de3`
 
 ## Résumé
 
