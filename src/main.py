@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import time
 from typing import List
 from urllib.parse import urlparse
 
@@ -30,6 +31,7 @@ def configure_logging() -> None:
 
 
 def run(config_path: str) -> int:
+    started_at = time.perf_counter()
     config = Config.load(config_path)
     source = config.resolve_source()
     enforce_target_policies(source, config.scrape.delay_seconds)
@@ -71,12 +73,14 @@ def run(config_path: str) -> int:
         normalized = normalized[: config.scrape.max_items]
     export_json(normalized, config.export.output_path)
 
+    duration_ms = (time.perf_counter() - started_at) * 1000
     logging.info("Pages parcourues: %d", pages_seen)
     logging.info("Items vus: %d", stats.seen)
     logging.info("Items exportes: %d", len(normalized))
     logging.info("Items rejetes (champ obligatoire manquant): %d", stats.rejected)
     logging.info("Doublons ignores: %d", stats.duplicates)
     logging.info("Items avec champ optionnel manquant: %d", stats.missing_fields)
+    logging.info("Duree totale de la collecte: %.1f ms", duration_ms)
     logging.info("Sortie ecrite: %s", config.export.output_path)
 
     if not normalized:
