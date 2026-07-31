@@ -1,82 +1,162 @@
 [
   {
-    "id": "https://web.archive.org/web/20151119144851/http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-582613",
-    "title": "\"Te Toki a Tapiri, waka taua\"",
+    "id": "https://www.aucklandmuseum.com/discover/collections",
+    "title": "Collections Online",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://web.archive.org/web/20151119144851/http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-582613",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-582613",
-    "title": "the original",
+    "id": "https://www.aucklandmuseum.com/discover/collections-online",
+    "title": "Collections Online. Explore over 1 million records.",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-582613",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections-online",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "http://www.aucklandmuseum.com/collections-research/collections/topics/tairua-trolling-lure",
-    "title": "\"Tairua trolling lure\"",
+    "id": "https://learn.aucklandmuseum.com/collections-to-classrooms",
+    "title": "Collections to Classrooms",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "http://www.aucklandmuseum.com/collections-research/collections/topics/tairua-trolling-lure",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://learn.aucklandmuseum.com/collections-to-classrooms",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "https://web.archive.org/web/20180202201204/http://www.aucklandmuseum.com/collections-research/collections/topics/tairua-trolling-lure",
-    "title": "Archived",
+    "id": "https://www.aucklandmuseum.com/discover/collections/search",
+    "title": "Search",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://web.archive.org/web/20180202201204/http://www.aucklandmuseum.com/collections-research/collections/topics/tairua-trolling-lure",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/search",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "http://www.aucklandmuseum.com/discover/collections/topics/the-auckland-museum-frieze-scenes-of-war",
-    "title": "\"The Auckland Museum frieze: Scenes of war\"",
+    "id": "https://www.aucklandmuseum.com/discover/collections/my-collection",
+    "title": "My Collection",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "http://www.aucklandmuseum.com/discover/collections/topics/the-auckland-museum-frieze-scenes-of-war",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/my-collection",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "https://web.archive.org/web/20180128040811/http://www.aucklandmuseum.com/discover/collections/topics/the-auckland-museum-frieze-scenes-of-war",
-    "title": "Archived",
+    "id": "https://www.aucklandmuseum.com/discover/collections/about",
+    "title": "About our collection",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://web.archive.org/web/20180128040811/http://www.aucklandmuseum.com/discover/collections/topics/the-auckland-museum-frieze-scenes-of-war",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/about",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-53811",
-    "title": "\"Statue of the Dying Galatian\"",
+    "id": "https://www.aucklandmuseum.com/discover/collections/Our-Data",
+    "title": "Our Data",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "http://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-53811",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/Our-Data",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "https://web.archive.org/web/20230419134922/https://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-53811",
-    "title": "Archived",
+    "id": "https://www.aucklandmuseum.com/discover/collections/using-our-images",
+    "title": "Using our images",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://web.archive.org/web/20230419134922/https://www.aucklandmuseum.com/collections-research/collections/record/am_humanhistory-object-53811",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/using-our-images",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "https://www.aucklandmuseum.com/collections-research/collections/search?pp=100&entm=http%3a%2f%2fapi.aucklandmuseum.com%2fid%2fperson%2f10814",
-    "title": "\"Search for creator: \"Domenico Brucciani\"\"",
+    "id": "https://www.aucklandmuseum.com/discover/collections/partnerships",
+    "title": "Partnerships",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://www.aucklandmuseum.com/collections-research/collections/search?pp=100&entm=http%3a%2f%2fapi.aucklandmuseum.com%2fid%2fperson%2f10814",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/partnerships",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   },
   {
-    "id": "https://web.archive.org/web/20220210055102/https://www.aucklandmuseum.com/collections-research/collections/search?pp=100&entm=http://api.aucklandmuseum.com/id/person/10814",
-    "title": "Archived",
+    "id": "https://www.aucklandmuseum.com/discover/collections/topics",
+    "title": "Explore topics",
     "category": "Collection Item",
     "date_text": "N/A",
-    "url": "https://web.archive.org/web/20220210055102/https://www.aucklandmuseum.com/collections-research/collections/search?pp=100&entm=http://api.aucklandmuseum.com/id/person/10814",
-    "collected_at": "2026-07-31T12:05:13.922652+00:00"
+    "url": "https://www.aucklandmuseum.com/discover/collections/topics",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections/collection-highlights",
+    "title": "Collection highlights",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections/collection-highlights",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections/Toki-and-Adze-Collection",
+    "title": "Toki and Adze Collection",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections/Toki-and-Adze-Collection",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections/Tohutoa-Medals-Search",
+    "title": "Tohutoa Medals Search",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections/Tohutoa-Medals-Search",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections/Roadmap",
+    "title": "Roadmap",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections/Roadmap",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections?lang=mi-nz",
+    "title": "te reo Māori​",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections?lang=mi-nz",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection",
+    "title": "More",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/documentary-heritage",
+    "title": "Documentary Heritage",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/documentary-heritage",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/human-history",
+    "title": "Human History",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/human-history",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/natural-sciences",
+    "title": "Natural Sciences",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://www.aucklandmuseum.com/discover/collections-online/about-our-collection/natural-sciences",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
+  },
+  {
+    "id": "https://collectionstoclassrooms.shorthandstories.com/language-select/",
+    "title": "View",
+    "category": "Collection Item",
+    "date_text": "N/A",
+    "url": "https://collectionstoclassrooms.shorthandstories.com/language-select/",
+    "collected_at": "2026-07-31T12:46:20.086690+00:00"
   }
 ]

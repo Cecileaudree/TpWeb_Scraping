@@ -2,13 +2,13 @@
   "target": {
     "base_url": "https://www.aucklandmuseum.com",
     "start_page": "https://www.aucklandmuseum.com/collections-research/collections",
-    "item_selector": "#bodyContent a[href^='/wiki/']",
+    "item_selector": "main a[href]",
     "next_page_selector": null,
     "fields": {
       "title": "self",
       "url": "self",
-      "category": "span",
-      "date_text": "time"
+      "category": "self",
+      "date_text": "self"
     }
   },
   "export": {
@@ -16,9 +16,9 @@
     "format": "json"
   },
   "scrape": {
-    "delay_seconds": 1.0,
+    "delay_seconds": 30.0,
     "max_pages": 1,
-    "max_items": 10,
+    "max_items": 20,
     "sample_mode": false
   }
 }

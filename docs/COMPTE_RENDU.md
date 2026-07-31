@@ -62,7 +62,7 @@ L'objet collecté est un `CollectionItem` (`title`, `category`, `date_text`, `ur
 
 | Vus | Exportés | Rejetés | Doublons | Champs manquants |
 | :---: | :---: | :---: | :---: | :---: |
-| 68 | 10 | 0 | 2 | 0 |
+| 30 | 20 | 0 | 8 | 0 |
 
 ### Exemple d'objet JSON généré (`samples/sample_output.json`) :
 

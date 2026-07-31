@@ -25,7 +25,7 @@ def extract_next_page(html_or_data: Any, page_url: str, next_page_selector: Opti
 def extract_items(html_or_data: Any, start_page: str, item_selector: str, fields: Dict[str, str]) -> List[RawItem]:
     results: List[RawItem] = []
 
-    # 1. Handle JSON Intercepted from Playwright
+    # 1. Traitement JSON intercepté (si présent)
     data = html_or_data if isinstance(html_or_data, dict) else None
     if isinstance(html_or_data, str) and html_or_data.strip().startswith("{"):
         try:
@@ -58,14 +58,12 @@ def extract_items(html_or_data: Any, start_page: str, item_selector: str, fields
         if results:
             return results
 
-    # 2. Fallback HTML Parser
+    # 2. Parser HTML principal avec les sélecteurs de config
     soup = BeautifulSoup(str(html_or_data), "html.parser")
     for link in soup.select(item_selector):
         if not getattr(link, "name", None):
             continue
 
-        # Support des champs extraits sur l'element courant (selector = "self").
-        # Utile pour les cartes de résultats du moteur de recherche Auckland Museum.
         raw: Dict[str, Optional[str]] = {}
         for field_name, selector in fields.items():
             selected = link if selector == "self" else link.select_one(selector)
@@ -74,9 +72,14 @@ def extract_items(html_or_data: Any, start_page: str, item_selector: str, fields
                 continue
 
             if field_name in {"link", "url"} or field_name.endswith("_url"):
-                raw[field_name] = selected.get("href") if hasattr(selected, "get") else None
+                href_val = selected.get("href") if hasattr(selected, "get") else None
+                raw[field_name] = href_val if href_val else selected.get_text(strip=True)
             else:
-                raw[field_name] = selected.get_text(strip=True)
+                text_val = selected.get_text(strip=True)
+                # Fallback si le texte est vide (ex: image ou balise sans texte)
+                if not text_val and selected.name == "a" and selected.has_attr("href"):
+                    text_val = selected["href"].split("/")[-1] or "Collection Item"
+                raw[field_name] = text_val
 
         raw["source_page"] = start_page
         results.append(RawItem(raw=raw))
@@ -84,11 +87,12 @@ def extract_items(html_or_data: Any, start_page: str, item_selector: str, fields
     if results:
         return results
 
+    # 3. Fallback générique sur les liens du musée
     for link in soup.find_all("a", href=True):
         href = link.get("href", "")
-        text = link.get_text(strip=True)
+        text = link.get_text(strip=True) or href.split("/")[-1]
         
-        if len(text) > 3 and any(k in href for k in ["/collections/", "/record/", "/imagedata/"]):
+        if any(k in href for k in ["/collections", "/record/", "/imagedata/"]):
             raw = {
                 "title": text,
                 "url": urljoin(start_page, href),
